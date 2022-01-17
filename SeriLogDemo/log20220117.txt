@@ -23,3 +23,9 @@ System.Exception: Exception thrown at Index file.
 2022-01-17 23:18:13.072 +05:30 [FTL] Something bad has happended. 
 System.Exception: Exception thrown at Index file.
    at SeriLogDemo.Pages.IndexModel.OnGet() in C:\Users\pulasthiranathunga\Desktop\ASP NET CORE\SeriLog\SeriLogDemo\SeriLogDemo\Pages\Index.cshtml.cs:line 27
+2022-01-17 23:28:28.270 +05:30 [INF] Application has started at "2022-01-17T23:28:28.2521767+05:30"
+2022-01-17 23:28:33.753 +05:30 [INF] Index page is being loaded by Pula at "2022-01-17T23:28:33.7493642+05:30"
+2022-01-17 23:28:33.761 +05:30 [ERR] Something went wrong here  by Pula at "2022-01-17T23:28:33.7611160+05:30"
+2022-01-17 23:28:33.911 +05:30 [FTL] Something bad has happended. 
+System.Exception: Exception thrown at Index file.
+   at SeriLogDemo.Pages.IndexModel.OnGet() in C:\Users\pulasthiranathunga\Desktop\ASP NET CORE\SeriLog\SeriLogDemo\SeriLogDemo\Pages\Index.cshtml.cs:line 27

@@ -17,8 +17,12 @@ namespace SeriLogDemo
         [Obsolete]
         public static void Main(string[] args)
         {
-            var connString = "Data Source=CML-PULASTHIRAN\\SQL2019;Initial Catalog=serilog;User Id=sa;Password=123";
-            var logTable = "Logging";
+            var config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            var connString = config.GetConnectionString("Default");
+            var logTable = config.GetValue<string>("MyLogs:LogTableName");
             var colOptions = new ColumnOptions();
 
             Log.Logger = new LoggerConfiguration()
