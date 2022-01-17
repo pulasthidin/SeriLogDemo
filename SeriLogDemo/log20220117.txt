@@ -1,0 +1,6 @@
+2022-01-17 20:02:13.954 +05:30 [INF] Application has started at "2022-01-17T20:02:13.9424885+05:30"
+2022-01-17 20:02:20.218 +05:30 [INF] Index page is being loaded
+2022-01-17 20:02:20.225 +05:30 [ERR] Something went wrong here
+2022-01-17 20:02:20.355 +05:30 [FTL] Something bad has happended. 
+System.Exception: Exception thrown at Index file.
+   at SeriLogDemo.Pages.IndexModel.OnGet() in C:\Users\pulasthiranathunga\Desktop\ASP NET CORE\SeriLog\SeriLogDemo\SeriLogDemo\Pages\Index.cshtml.cs:line 27
