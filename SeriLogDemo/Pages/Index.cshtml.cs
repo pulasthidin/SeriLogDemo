@@ -19,8 +19,8 @@ namespace SeriLogDemo.Pages
 
         public void OnGet()
         {
-            _logger.LogInformation("Index page is being loaded");
-            _logger.LogError("Something went wrong here");
+            _logger.LogInformation("Index page is being loaded by {DevName} at {LogTime}", "Pula", DateTime.Now);
+            _logger.LogError("Something went wrong here  by {DevName} at {LogTime}", "Pula", DateTime.Now);
 
             try
             {

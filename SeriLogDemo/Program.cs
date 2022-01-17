@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
+using Serilog.Sinks.MSSqlServer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +14,23 @@ namespace SeriLogDemo
 {
     public class Program
     {
+        [Obsolete]
         public static void Main(string[] args)
         {
+            var connString = "Data Source=CML-PULASTHIRAN\\SQL2019;Initial Catalog=serilog;User Id=sa;Password=123";
+            var logTable = "Logging";
+            var colOptions = new ColumnOptions();
+
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .WriteTo.Console() //console loggers (errors write to Console)
                 .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day) //file logger (errors write to file)
+                .WriteTo.MSSqlServer(
+                connectionString:connString,
+                tableName:logTable,
+                columnOptions:colOptions,
+                autoCreateSqlTable:true)
                 .CreateLogger(); //configure seri log
 
 
